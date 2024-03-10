@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/d97987d80b.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 20px 20px 0;
+            padding: 0;
+            width: 100%;
+            
+        }
+        .head{
+            text-align: center; 
+ 
+        }
+
+        span{
+            color: rgb(103, 2, 244);
+          
+        }
+
+        b{
+            color: tomato;
+        }
+
+        .step{
+           border: 3px solid yellowgreen;
+           width:fit-content;
+           color: brown;
+           font: 1em sans-serif;
+        }
+        .step:hover{
+            background-color: yellow;
+        }
+        .b-2{
+            color:red;
+
+        }
+        .s-2{
+            color:blue;
+        }
+
+        @media screen and (min-width: 576px) and (max-width: 1080px) {
+            .step{
+                font: 1.5em;
+            }
+            
+        }
+        
+    </style>
+</head>
+<body>
+ 
+    <div class="head">
+        <h2>Multidimensional Arrays Report</h2>
+        <p>Subject: Java <br>Teacher: <span>Ray</span>  <br>Last Date: 11-02-2024 (Monday) </p>
+    </div>
+
+   <ul>
+     <li><b>Topic Related:</b></li>
+    <li>8.2 Two-Dimensional Array Basics</li>
+    <li>8.3 Processing Two-Dimensional Arrays</li>
+    <li>8.4 Passing Two-Dimensional Arrays to Methods</li>
+   </ul>
+    
+
+ <br>
+
+    <div>
+    <p class="step"><i class="fa-solid fa-star"></i><b>(8.2):</b></i> What is the multidimensional array (2D array)? </p>
+    <p><i class="fa-solid fa-arrow-right"></i> A multidimensional array is an array of arrays. <br>Multidimensional arrays are useful when you want to store data as a tabular form, like a table with rows and columns.
+        <ul>
+            <li>A two-dimensional array is an array in which each element is itself an array.</li>
+            <li>It can be visualized as a grid or table, with rows and columns.</li>
+            <li>You can access elements using two indices: one for the row and one for the column.</li>
+            <br>
+
+            <ul><h4>Example:</h4>
+                <li>int[][] twoDArray = new int[3][4]; <span>// 3x4 2D array</span></li>
+                <li>int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+                    <br>
+                    System.out.println(myNumbers[1][2]); <span>// Outputs 7</span></li>
+            </ul>
+            <br>
+        
+
+         <li class="step">8.2.1   Declaring Variables of Two-Dimensional Arrays and Creating Two-Dimensional Arrays:</li>
+         <br>
+           <ul>
+            <li><b class="b-2">Declare a variable for a two-dimensional array:</b>  elementType[][] arrayRefVar;</li>
+            <li><b class="b-2">Create a two-dimensional array:</b> arrayRefVar = new elementType[numRows][numColumns];</li>
+            <li><b class="b-2">Access elements in a two-dimensional array:</b> arrayRefVar[rowIndex][columnIndex];</li>
+
+            <p>Now I can discuss this figure.
+                <img width="100%" height="100%" src="img/Screenshot_3.png" alt="">
+
+                <li><B>Figure-a:</B> The statement matrix = new int[5][5]; <br>Creates a two-dimensional array named matrix with dimensions 5 by 5. <br>This means matrix is an array that can hold 5 arrays, each of which can hold 5 integers. <br>The array is initialized with default values, which for integers is 0 in Java.</li>
+                <br>
+                 
+                <li><b>Figure-b:</b> The statement matrix[2][1] = 7; <br> It assigns the value 7 to the element at the 3rd row and 2nd column.  <br> In other words, it assigns the value 7 to the element in the 3rd row and 2nd column of the matrix array. 
+                </li>
+
+                <br>
+                <li><b>Figure-c:</b> This is a declaration and initialization of a two-dimensional array . <br>It creates a 4x3 matrix where each row contains three elements. </li>
+            </p>
+           </ul>
+
+           <br>
+
+           <li class="step">8.2.2 Obtaining the Lengths of Two-Dimensional Arrays:</li>
+           <br>
+           <ul>
+            <li>A two-dimensional array is an array of arrays, so each row can have a different length.</li>
+           <li>length to get the number of rows and array[rowIndex].length to get the number of columns in a specific row.</li>
+
+           <p>Now i can discus this figure
+            <img src="img/Screenshot_1.png" alt="">
+            
+              <br> <span class="s-2"> In Java, a two-dimensional array is essentially an array of arrays. Each element in a two-dimensional array is itself an array. 
+                <br>This means that each cell in the two-dimensional array can hold an array of values, creating a grid-like structure.</span>
+             
+           </p>
+           </ul>
+           <br>
+
+           <li class="step">8.2.3 Ragged Arrays:</li>
+           <br>
+           <ul>
+            <li>Ragged arrays have rows with different lengths.</li>
+            <li>Example: int[][] raggedArray = new int[][] { {1}, {2, 3}, {4, 5, 6} };</li>
+            <br>
+            <ul>
+                <li>triangleArray[0][3] = 50; sets the value at the intersection of the first row and the fourth column to 50.</li>
+                <li>triangleArray[4][0] = 45; sets the value at the intersection of the fifth row and the first column to 45.</li>
+            </ul> 
+
+            <p><img src="img/check point.png" alt="">
+                <ul>
+                    <li><b>8.1 <i class="fa-solid fa-right-long"> </i></b>Answer: int[][] m = new int[4][5];
+                    </li>
+                    <li><b>8.2 <i class="fa-solid fa-right-long"></i></b>Answer: Yes, They are ragged array.</li>
+                    <li><b>8.3 <i class="fa-solid fa-right-long"></i></b>Answer: array[0][1] is 2.</li>
+                    <li><b>8.4 <i class="fa-solid fa-right-long"></i></b>Answer: 
+                        <br>
+                        <ul> 
+            
+                            <li>int[][] r = new int[2]; <br>
+                                Answer: Invalid</li>
+                            <li>int[] x = new int[]; <br>
+                                Answer: Invalid
+                                </li>
+                            <li>int[][] y = new int[3][]; <br>
+                                Answer: Valid</li>
+                            <li>int[][] z = {{1, 2}}; <br>
+                                Answer: Valid</li>
+                            <li>int[][] m = {{1, 2}, {2, 3}};<br>
+                                Answer: Valid</li>
+                            <li>int[][] n = {{1, 2}, {2, 3}, };<br>
+                                Answer: Invalid</li>
+                        </ul>
+                    </li>
+                </ul>
+            
+            </p>
+
+           </ul>
+        
+        </ul>
+
+     </p>
+    
+    </div>
+
+ 
+    <br>
+
+    <div>
+        <p class="step"><i class="fa-solid fa-star"></i><b>(8.3):</b></i> Processing Two-Dimensional Arrays:
+
+            <ul>
+                <li>Nested loops are used to process two-dimensional arrays.</li>
+                <li>Operations: initializing with input or random values, printing, summing all elements, summing by column, <br>finding the row with the largest sum, and shuffling.</li>
+            </ul>
+        
+             <ul>
+                <li class="step" >Initializing arrays with input values:</li>
+                    <img width="50%" height="50%" src="img/java 1.png" alt="">
+                    
+                <li class="step">Initializing arrays with random values:</li>
+                  <img  width="50%" height="50%" src="img/random.png" alt="">
+                
+                 
+                <li class="step">Printing arrays:</li>
+                <img  width="50%" height="50%" src="img/array3.png" alt="">
+
+                <li class="step">Summing all elements:</li>
+                <img  width="50%" height="50%" src="img/tatal.png" alt="">
+
+                <li class="step">Summing elements by column:</li>
+                <img  width="50%" height="50%" src="img/col.png" alt="">
+
+                <li class="step">NO Fixed Column:</li>
+                <img  width="50%" height="50%" src="img/no fixed.png" alt="">
+
+             </ul>
+
+            <p><img src="img/check point.png" alt="">
+            <ul>
+                <li><b>8.5 <i class="fa-solid fa-right-long"></i></b>Answer:  6 5  4 3  2 1 </li>
+                <li><b>8.6 <i class="fa-solid fa-right-long"></i></b>Answer: 9</li>
+
+            </ul>
+            
+            </P>
+        
+        </p>
+
+    </div>
+
+
+
+    <div>
+        <p class="step"><i class="fa-solid fa-star"></i><b>(8.3):</b></i> 8.4 Passing Two-Dimensional Arrays to Methods: 
+        
+        <ul>
+         <li>Passing Two-Dimensional Arrays to Methods in Java allows you to manipulate or operate on two-dimensional arrays within methods.</li>
+         <img width="50%" height="50%" src="img/last.png" alt="">
+
+         <p><img src="img/check point.png" alt="">
+            <ul>
+               <li> <b>8.6 <i class="fa-solid fa-right-long"></i></b>Answer: 2 4 </li>
+
+        </ul>
+        
+        
+        </p>
+
+
+    </div>
+
+
+    <p> In summary,<span>Multidimensional arrays</span> are useful for representing structured data and can be processed using nested loops for various operations.</p>
+
+
+</body>
+</html>
